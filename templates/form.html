@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Passenger Information</title>
+  <style>
+    body {
+      background-color: #f0f2f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h2 {
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      margin: 0;
+    }
+
+    .form-box {
+      width: 500px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      margin: 40px auto;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 15% auto;
+      padding: 20px;
+      border-radius: 8px;
+      width: 350px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .modal-content h3 {
+      margin: 0 0 20px;
+    }
+
+    .modal-content button {
+      background: #28a745;
+      padding: 10px 20px;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .modal-content button:hover {
+      background: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Passenger Information</h2>
+
+  <div class="form-box">
+    <form id="passengerForm">
+      <label for="name">Passenger Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" required min="1">
+
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender" required>
+        <option value="">Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="10-digit number">
+
+      <button type="submit">Proceed to Payment</button>
+    </form>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="confirmationModal">
+    <div class="modal-content">
+      <h3>Passenger Details Submitted!</h3>
+      <button id="okBtn">OK</button>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('passengerForm');
+    const modal = document.getElementById('confirmationModal');
+    const okBtn = document.getElementById('okBtn');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // stop actual form submission
+      modal.style.display = 'block';
+    });
+
+    okBtn.addEventListener('click', function() {
+      modal.style.display = 'none';
+      window.location.href = 'payment.html';
+    });
+  </script>
+
+</body>
+</html>

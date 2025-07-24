@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ticket Confirmation</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #e3f2fd;
+      margin: 0;
+      padding: 0;
+    }
+
+    .ticket-container {
+      max-width: 600px;
+      margin: 60px auto;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      padding: 30px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #2e7d32;
+      margin-bottom: 20px;
+    }
+
+    .ticket-info {
+      text-align: left;
+      margin-top: 20px;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #1565c0;
+    }
+
+    .amount-paid {
+      color: #d32f2f;
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #0b7dda;
+    }
+  </style>
+</head>
+<body>
+  <div class="ticket-container">
+    <h2>Ticket Confirmed 🎫</h2>
+    <div class="ticket-info">
+      <p><span class="highlight">Passenger Name:</span> Chaithanya A</p>
+      <p><span class="highlight">Bus:</span> Hyderabad to Vijayawada</p>
+      <p><span class="highlight">Seat No:</span> A1</p>
+      <p><span class="highlight">Date:</span> 25th July 2025</p>
+      <p class="amount-paid">Amount Paid: ₹500</p>
+    </div>
+
+    <a href="thankyou.html" class="btn">Finish</a>
+  </div>
+</body>
+</html>

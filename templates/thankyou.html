@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f3f4f6;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .thankyou-box {
+      background-color: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 500px;
+    }
+
+    .thankyou-box h2 {
+      color: #2e7d32;
+      margin-bottom: 20px;
+    }
+
+    .thankyou-box p {
+      font-size: 18px;
+      color: #333;
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #0b7dda;
+    }
+  </style>
+</head>
+<body>
+  <div class="thankyou-box">
+    <h2>Thank You! 🎉</h2>
+    <p>Your booking has been successfully completed.</p>
+    <p>We wish you a safe and comfortable journey!</p>
+    <a href="index.html" class="btn">Go to Home</a>
+  </div>
+</body>
+</html>
